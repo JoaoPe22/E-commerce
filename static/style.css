@@ -8,16 +8,18 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
+/* NAVBAR - INICIO */
 nav {
-    background: #30aee4;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    height: 60px;
-    box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.9);
-    position: relative;
-    z-index: 3;
+    padding: 20px;
+    height: 90px;
+    box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
 }
 
 .logo {
@@ -26,19 +28,20 @@ nav {
 }
 
 .logo img {
-    height: 25px;
+    height: 58px;
     width: auto;
-    margin-right: 10px;
 }
 
 .logo h1 {
     color: white;
-    font-size: 1.5rem;
+    font-size: 25px;
+    padding: 20px;
 }
 
 .content-item {
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 .content-item li {
@@ -47,6 +50,7 @@ nav {
 
 .link {
     text-decoration: none;
+    font-size: 22px;
     font-weight: bolder;
     color: white;
     transition: all 0.6s;
@@ -66,6 +70,10 @@ nav {
     z-index: 4;
 }
 
+.link img{
+    display: flex;
+    width: 30px;
+}
 
 .line {
     width: 25px;
@@ -152,21 +160,30 @@ nav {
     }
 }
 
-
 @media screen and (min-width: 791px) {
     .content-item {
         display: flex;
     }
-    
+
     .icon_menu {
         display: none;
     }
-    
+
     .menu {
         left: -70%;
     }
-    
+
     .menu.active {
         left: -70%;
     }
 }
+
+/* NAVBAR - FINAL */
+
+/* ECOMMERCE - INICIO */
+.ecommerce {
+    background: linear-gradient(#5cb1e3, #b9bcdd);
+    height: 550px;
+}
+
+/* ECOMMERCE - INICIO */
