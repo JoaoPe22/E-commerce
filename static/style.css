@@ -4,23 +4,25 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-}
-
-
 /* NAVBAR - INICIO */
 nav {
     background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 0px 120px 0px 120px;
     height: 90px;
     box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.9);
     position: fixed;
     width: 100%;
+    transition: 0.5s ease;
 }
+
+.navbarT.scrolled {
+    background-color: #ff0000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
 
 .logo {
     display: flex;
@@ -28,14 +30,14 @@ nav {
 }
 
 .logo img {
-    height: 58px;
+    height: 45px;
     width: auto;
 }
 
 .logo h1 {
     color: white;
     font-size: 25px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .content-item {
@@ -70,7 +72,7 @@ nav {
     z-index: 4;
 }
 
-.link img{
+.link img {
     display: flex;
     width: 30px;
 }
@@ -182,8 +184,8 @@ nav {
 
 /* ECOMMERCE - INICIO */
 .ecommerce {
-    background: linear-gradient(#5cb1e3, #b9bcdd);
-    height: 550px;
+    background: linear-gradient(#3d3d3e, #929292);
+    height: 570px;
 }
 
 /* ECOMMERCE - INICIO */
