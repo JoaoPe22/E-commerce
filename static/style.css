@@ -11,11 +11,13 @@ nav {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0px 120px 0px 120px;
+    padding: 0px 120px;
     min-height: 90px;
     box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.9);
     position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
     transition: 0.5s ease;
     z-index: 1;
 }
@@ -76,9 +78,147 @@ nav {
 
 
 /* ECOMMERCE - INICIO */
-.ecommerce {
-    background: linear-gradient(#959393, #ffffff);
-    height: 570px;
+.ecommerce-container {
+    background: linear-gradient(70deg, rgb(34, 42, 128) 0%, rgb(230, 230, 230) 80%, rgb(34, 42, 128)150%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    width: 100%;
+    padding-top: 90px;
+    overflow: hidden;
+}
+
+.ecommerce-carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.ecommerce-item {
+    min-width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.ecommerce-item h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.ecommerce-item p {
+    font-size: 1.2rem;
+}
+
+.ecommerce-image {
+    flex: 0 0 auto;
+}
+
+.ecommerce-item img {
+    width: 350px;
+    margin-top: 20px;
+}
+
+.ecommerce-seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+}
+
+.ecommerce-seta-esquerda {
+    left: 10px;
+}
+
+.ecommerce-seta-direita {
+    right: 10px;
+}
+
+/* ECOMMERCE - FINAL */
+
+/* OFERTAS - INICIO */
+.ofertas-container {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 5;
+}
+
+.oferta {
+    background-color: white;
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.oferta h2 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.oferta img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.oferta a {
+    color: #007185;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.loja-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.loja {
+    background-color: white;
+    width: 300px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.loja h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.loja img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px
+}
+
+.loja a {
+    color: #007185;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
 }
 
 /* ECOMMERCE - FINAL */
@@ -88,8 +228,8 @@ nav {
 /* CARDs CARROSSEL - INICIO*/
 .carrosel-container {
     max-width: 1000px;
-    margin: 0 auto;
-    padding: 0px 20px;
+    margin: 40px auto;
+    padding: 40px 20px;
     background: #f0f0f0a3;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.15) 2px 10px 20px;
@@ -97,6 +237,7 @@ nav {
 
 .cabecalho {
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .cabecalho h2 {
@@ -228,43 +369,6 @@ nav {
     color: #fff;
 }
 
-@media (max-width: 768px) {
-    nav {
-        padding: 10px 20px;
-        justify-content: center;
-    }
-
-    .logo {
-        order: -1;
-        flex-basis: 100%;
-        justify-content: center;
-    }
-
-    .content-item {
-        justify-content: center;
-        flex-basis: 100%;
-    }
-
-    .card {
-        flex: 0 0 260px;
-    }
-}
-
-@media (max-width: 480px) {
-    .card {
-        flex: 0 0 240px;
-        height: 330px;
-    }
-
-    .cabecalho h2 {
-        font-size: 24px;
-    }
-
-    .image {
-        height: 150px;
-    }
-}
-
 /* CARDs CARROSSEL - FINAL*/
 
 
@@ -306,3 +410,149 @@ nav {
 }
 
 /* FOOTER - FINAL */
+
+/* MEDIA_RESPONSIVIDADE_PAG - INICIO */
+@media (max-width: 1024px) {
+
+    /* NAVBAR */
+    nav {
+        padding: 10px 60px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    nav {
+        padding: 10px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        min-height: auto;
+        width: 100vw;
+    }
+
+    .logo {
+        flex: 1;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .content-item li {
+        padding: 8px;
+    }
+
+    .link {
+        font-size: 16px;
+    }
+
+    /* ECOMMERCE */
+    .ecommerce-carrossel h1 {
+        font-size: 1.8rem;
+    }
+
+    .ecommerce-carrossel p {
+        font-size: 1em;
+    }
+
+    .ecommerce-item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Ofertas */
+    .ofertas-container {
+        width: 150px;
+    }
+
+    .loja {
+        width: 100%;
+    }
+
+    /* CARROSSEL CARDs */
+    .card {
+        flex: 0 0 260px;
+    }
+
+    /* DESDE */
+    .columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .column {
+        padding: 20px;
+    }
+
+    .desde-title h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* NAVBAR */
+    nav {
+        padding: 10px 15px;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .logo {
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .content-item {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .content-item li {
+        padding: 5px;
+    }
+
+    .link {
+        font-size: 14px;
+    }
+
+
+    /* CARROSSEL CARDs */
+    .carrosel-container {
+        margin: 20px auto;
+        padding: 20px 15px;
+    }
+
+    .card {
+        flex: 0 0 240px;
+        height: 330px;
+    }
+
+    .cabecalho h2 {
+        font-size: 24px;
+    }
+
+    .image {
+        height: 150px;
+    }
+
+    /* DESDE */
+    .desde-title h1 {
+        font-size: 1.8rem;
+    }
+
+    .column h1 {
+        font-size: 1.5rem;
+    }
+
+    .column h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* MEDIA_RESPONSIVIDADE_PAG - FINAL */

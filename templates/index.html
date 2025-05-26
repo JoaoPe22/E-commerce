@@ -12,23 +12,78 @@
 
     <!-- NAVBAR -->
 
-    <nav class="navbarT">
+    <nav class="navbarT" id="navbarT">
         <div class="logo">
-            <img src="../static/img/logo.png" alt="">
+            <img src="../static/img/home/logo.png" alt="">
             <h1>Logo</h1>
         </div>
         <ul class="content-item">
             <li><a href="" class="link">Home</a></li>
             <li><a href="" class="link">Produtos</a></li>
             <li><a href="" class="link">Cadastro</a></li>
-            <li><a href="" class="link"><img src="../static/img/carrinho.png" alt=""></a></li>
-            <li><a href="" class="link"><img src="../static/img/login.png" alt=""></a></li>
+            <li><a href="" class="link"><img src="../static/img/home/carrinho.png" alt=""></a></li>
+            <li><a href="" class="link"><img src="../static/img/home/login.png" alt=""></a></li>
         </ul>
     </nav>
 
     <!-- eCOMMERCE -->
-    <div class="ecommerce">
+    <div class="ecommerce-container">
+        <div class="ecommerce-carrossel" id="ecommerce-carrossel">
 
+            <div class="ecommerce-item">
+                <div class="ecommerce-cabecalho">
+                    <h1>Alexa</h1>
+                    <p>Automatize sua casa, deixe ela inteligente com Alexa</p>
+                </div>
+                <div class="ecommerce-image">
+                    <img src="../static/img/home/alexa.png" alt="alexa" />
+                </div>
+            </div>
+
+            <div class="ecommerce-item">
+                <div class="ecommerce-cabecalho">
+                    <h1>Alexa</h1>
+                    <p>Automatize sua casa, deixe ela inteligente com Alexa</p>
+                </div>
+                <div class="ecommerce-image">
+                    <img src="../static/img/home/alexa.png" alt="alexa" />
+                </div>
+            </div>
+        </div>
+
+        <span class="ecommerce-seta ecommerce-seta-esquerda" onclick="moveCarousel(-1)">❮</span>
+        <span class="ecommerce-seta ecommerce-seta-direita" onclick="moveCarousel(1)">❯</span>
+
+        <!-- <div class="ofertas-container" id="ofertas-container">
+            <div class="oferta">
+                <h2>Ofertas de hojeee</h2>
+                <img src="../static/img/home/ofertas.png" alt="ofertas">
+                <a href="#">Veja mais</a>
+            </div>
+
+            <div class="oferta">
+                <h2>Ofertas de hoje</h2>
+                <img src="../static/img/home/ofertas.png" alt="ofertas">
+                <a href="#">Veja mais</a>
+            </div>
+        </div> -->
+    </div>
+
+    <!-- Conheça a Loja -->
+    <div class="loja-container">
+        <div class="loja">
+            <h2>Conheça nosso site</h2>
+            <img src="" alt="">
+            <p>Celulares, Computadores, Cuidados Pessoais</p>
+            <a href="#">Ver mais</a>
+        </div>
+
+        <div class="loja">
+            <h2>Todo dia tem Lançamento</h2>
+            <img src="" alt="">
+            <p>Celulares, Computadores, Cuidados Pessoais</p>
+            <a href="#">Ver mais</a>
+        </div>
     </div>
 
     <!-- CARROSSEL CARDs -->
@@ -174,6 +229,21 @@
         };
         window.addEventListener('scroll', changeNavbarColor);
         changeNavbarColor();
+
+
+        // ECOMMERCE
+        let currentIndex = 0;
+        const carousel = document.getElementById('ecommerce-carrossel');
+        const offersContainer = document.getElementById('ofertas-container');
+        const totalItems = document.querySelectorAll('.ecommerce-item').length;
+
+        function moveCarousel(direction) {
+            currentIndex = (currentIndex + direction + totalItems) % totalItems;
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            // Sincroniza as ofertas do dia
+            offersContainer.style.transform = `translateY(-${currentIndex * 50}%)`;
+        }
+        setInterval(() => moveCarousel(1), 5000);
     </script>
 </body>
 
