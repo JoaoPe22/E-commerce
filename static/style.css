@@ -82,29 +82,43 @@ nav {
     background: linear-gradient(70deg, rgb(34, 42, 128) 0%, rgb(230, 230, 230) 80%, rgb(34, 42, 128)150%);
     position: relative;
     display: flex;
-    justify-content: center;
-    height: 450px;
+    justify-content: space-between;
+    align-items: center;
+    height: 600px;
     width: 100%;
-    padding-top: 90px;
+    padding: 190px;
     overflow: hidden;
+    box-sizing: border-box;
+}
+
+.ecommerce-carrossel-container {
+    flex: 1;
+    max-width: 60%;
+    position: relative;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #c5baba44;
+    border-radius: 16px;
+}
+
+.ecommerce-item {
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    gap: 20px;
 }
 
 .ecommerce-carrossel {
     display: flex;
     transition: transform 0.5s ease-in-out;
     height: 100%;
+    width: 100%;
 }
-
-.ecommerce-item {
-    min-width: 100%;
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-items: center;
-    gap: 20px;
-}
-
 
 .ecommerce-item h1 {
     font-size: 2.5rem;
@@ -117,6 +131,8 @@ nav {
 
 .ecommerce-image {
     flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .ecommerce-item img {
@@ -147,42 +163,52 @@ nav {
 
 /* OFERTAS - INICIO */
 .ofertas-container {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+    flex: 1;
+    max-width: 40%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
-    z-index: 5;
+    padding: 10px;
+    margin-top: 80px;
 }
 
 .oferta {
-    background-color: white;
-    width: 200px;
-    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
     text-align: center;
+    width: 100%;
+    max-width: 200px;
+    box-sizing: border-box;
 }
 
 .oferta h2 {
-    font-size: 1.1em;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
 }
 
 .oferta img {
     width: 100%;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 5px;
+    max-width: 120px;
+    margin: 5px 0;
 }
 
 .oferta a {
-    color: #007185;
-    text-decoration: none;
-    margin-top: 10px;
     display: inline-block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #223a80;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.oferta a:hover {
+    background-color: #1a2e66;
 }
 
 .loja-container {
@@ -222,7 +248,6 @@ nav {
 }
 
 /* ECOMMERCE - FINAL */
-
 
 
 /* CARDs CARROSSEL - INICIO*/
@@ -444,50 +469,6 @@ nav {
     .link {
         font-size: 16px;
     }
-
-    /* ECOMMERCE */
-    .ecommerce-carrossel h1 {
-        font-size: 1.8rem;
-    }
-
-    .ecommerce-carrossel p {
-        font-size: 1em;
-    }
-
-    .ecommerce-item {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    /* Ofertas */
-    .ofertas-container {
-        width: 150px;
-    }
-
-    .loja {
-        width: 100%;
-    }
-
-    /* CARROSSEL CARDs */
-    .card {
-        flex: 0 0 260px;
-    }
-
-    /* DESDE */
-    .columns {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .column {
-        padding: 20px;
-    }
-
-    .desde-title h1 {
-        font-size: 2rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -519,26 +500,6 @@ nav {
 
     .link {
         font-size: 14px;
-    }
-
-
-    /* CARROSSEL CARDs */
-    .carrosel-container {
-        margin: 20px auto;
-        padding: 20px 15px;
-    }
-
-    .card {
-        flex: 0 0 240px;
-        height: 330px;
-    }
-
-    .cabecalho h2 {
-        font-size: 24px;
-    }
-
-    .image {
-        height: 150px;
     }
 
     /* DESDE */

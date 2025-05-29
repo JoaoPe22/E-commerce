@@ -28,33 +28,34 @@
 
     <!-- eCOMMERCE -->
     <div class="ecommerce-container">
-        <div class="ecommerce-carrossel" id="ecommerce-carrossel">
+        <div class="ecommerce-carrossel-container">
+            <div class="ecommerce-carrossel" id="ecommerce-carrossel">
 
-            <div class="ecommerce-item">
-                <div class="ecommerce-cabecalho">
-                    <h1>Alexa</h1>
-                    <p>Automatize sua casa, deixe ela inteligente com Alexa</p>
+                <div class="ecommerce-item">
+                    <div class="ecommerce-cabecalho">
+                        <h1>Alexa</h1>
+                        <p>Automatize sua casa, deixe ela inteligente com Alexa</p>
+                    </div>
+                    <div class="ecommerce-image">
+                        <img src="../static/img/home/alexa.png" alt="alexa" />
+                    </div>
                 </div>
-                <div class="ecommerce-image">
-                    <img src="../static/img/home/alexa.png" alt="alexa" />
+
+                <div class="ecommerce-item">
+                    <div class="ecommerce-cabecalho">
+                        <h1>Alexa</h1>
+                        <p>Automatize sua casa, deixe ela inteligente com Alexa</p>
+                    </div>
+                    <div class="ecommerce-image">
+                        <img src="../static/img/home/alexa.png" alt="alexa" />
+                    </div>
                 </div>
             </div>
-
-            <div class="ecommerce-item">
-                <div class="ecommerce-cabecalho">
-                    <h1>Alexa</h1>
-                    <p>Automatize sua casa, deixe ela inteligente com Alexa</p>
-                </div>
-                <div class="ecommerce-image">
-                    <img src="../static/img/home/alexa.png" alt="alexa" />
-                </div>
-            </div>
+            <span class="ecommerce-seta ecommerce-seta-esquerda" onclick="moveCarousel(-1)">❮</span>
+            <span class="ecommerce-seta ecommerce-seta-direita" onclick="moveCarousel(1)">❯</span>
         </div>
 
-        <span class="ecommerce-seta ecommerce-seta-esquerda" onclick="moveCarousel(-1)">❮</span>
-        <span class="ecommerce-seta ecommerce-seta-direita" onclick="moveCarousel(1)">❯</span>
-
-        <!-- <div class="ofertas-container" id="ofertas-container">
+        <div class="ofertas-container" id="ofertas-container">
             <div class="oferta">
                 <h2>Ofertas de hojeee</h2>
                 <img src="../static/img/home/ofertas.png" alt="ofertas">
@@ -66,7 +67,7 @@
                 <img src="../static/img/home/ofertas.png" alt="ofertas">
                 <a href="#">Veja mais</a>
             </div>
-        </div> -->
+        </div>
     </div>
 
     <!-- Conheça a Loja -->
@@ -234,7 +235,6 @@
         // ECOMMERCE
         let currentIndex = 0;
         const carousel = document.getElementById('ecommerce-carrossel');
-        const offersContainer = document.getElementById('ofertas-container');
         const totalItems = document.querySelectorAll('.ecommerce-item').length;
 
         function moveCarousel(direction) {
