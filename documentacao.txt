@@ -1,3 +1,6 @@
 *NAVBAR RESPONSIVO COM SCRIPT*
 https://www.freecodecamp.org/portuguese/news/como-criar-uma-barra-de-navegacao-responsiva-com-um-menu-de-sanduiche-usando-flexbox/ 
 
+*SUBLINHADO NAVBAR*
+https://www.htmlecsspro.com/artigo/animacao-de-link-sublinhado#google_vignette
+
