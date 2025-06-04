@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/carrinho.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbarT" id="navbarT">
+        <div class="logo">
+            <img src="../static/img/home/logo.png" alt="">
+            <a href="/templates/index.html">MegaLoja</a>
+        </div>
+        <ul class="content-item">
+            <li><a href="index.html" class="link">Home</a></li>
+            <li><a href="produtos.html" class="link">Produtos</a></li>
+            <li><a href="cadastro.html" class="link">Cadastro</a></li>
+            <li><a href="carrinho.html" class="link"><img src="../static/img/home/carrinho.png" alt="carrinho"></a></li>
+            <li><a href="login.html" class="link"><img src="../static/img/home/login.png" alt="login"></a></li>
+        </ul>
+    </nav>
+
+    <!-- Carrinho -->
+
+    <div class="container">
+        <div class="card-container">
+
+            <div class="card-item">
+                <img src="/static/img/home/laptop.png" alt="Laptop">
+                <div class="detalhes">
+                    <h3>Laptop SAMSUNG</h3>
+                    <p>Notebook gamer de 15" feito para quem quer estilo e desempenho</p>
+                </div>
+                <div class="funcao">
+                    <span class="preco">R$4.500.89</span>
+                    <div class="quantidade">
+                        <button class="decrease">-</button>
+                        <span class="quantity-value">2</span>
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="remover">Remover</button>
+                </div>
+            </div>
+
+            <div class="card-item">
+                <img src="/static/img/home/alexa.png" alt="Alexa">
+                <div class="detalhes">
+                    <h3>Alexa</h3>
+                    <p>Junte-se ao mundo da inteligência artificial com o A.R Variedades Mt Caixa...</p>
+                </div>
+                <div class="funcao">
+                    <span class="preco">R$459,50</span>
+                    <div class="quantidade">
+                        <button class="diminuir">-</button>
+                        <span class="quantity-value">2</span>
+                        <button class="incrementar">+</button>
+                    </div>
+                    <button class="remover">Remover</button>
+                </div>
+            </div>
+
+            <div class="card-total">
+                <p>Total de itens: 4</p>
+                <p class="total-preco">Total: R$9.920,78</p>
+                <button class="finalizar-compra">Finalizar Compra</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
