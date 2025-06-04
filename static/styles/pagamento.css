@@ -1,0 +1,378 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding-top: 80px;
+    /* Space for fixed navbar */
+    min-height: 100vh;
+    /* Allow scrolling */
+}
+
+/* NAVBAR - INICIO */
+nav {
+    background-color: #4e4747;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 120px;
+    min-height: 80px;
+    box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+}
+
+.logo a {
+    color: white;
+    font-size: 22px;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.content-item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.content-item li {
+    padding: 15px;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bolder;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.link:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
+}
+
+.link:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.link:hover {
+    color: #f0f0f0;
+}
+
+.link img {
+    display: flex;
+    width: 30px;
+}
+
+/* PAGAMENTO - INICIO */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    min-height: calc(100vh - 80px);
+}
+
+.pagamento-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.pedido {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(40% - 10px);
+    min-width: 300px;
+    flex: 1 1 100%;
+}
+
+.pedido h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.pedido-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.pedido-item:last-child {
+    border-bottom: none;
+}
+
+.nome {
+    font-size: 1rem;
+    color: #333;
+}
+
+.quantidade {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.preco {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.forma-pagamento {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(60% - 10px);
+    min-width: 400px;
+    flex: 1 1 100%;
+}
+
+.forma-pagamento h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.form {
+    margin-bottom: 15px;
+}
+
+.form label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form {
+    flex: 1;
+}
+
+.confirmar-pagamento {
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.confirmar-pagamento:hover {
+    background-color: #218838;
+}
+
+/* RESPONSIVIDADE - INICIO */
+@media (max-width: 1024px) {
+    nav {
+        padding: 10px 40px;
+    }
+
+    .pedido {
+        width: 100%;
+        max-width: none;
+    }
+
+    .forma-pagamento {
+        width: 100%;
+        max-width: none;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 20px;
+        flex-direction: column;
+        min-height: auto;
+        gap: 10px;
+    }
+
+    .logo {
+        flex: 1;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .content-item li {
+        padding: 8px;
+    }
+
+    .link {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .pedido {
+        min-width: 100%;
+        padding: 15px;
+    }
+
+    .pedido h2 {
+        font-size: 1.3rem;
+    }
+
+    .pedido-item {
+        font-size: 0.9rem;
+    }
+
+    .total {
+        font-size: 1rem;
+    }
+
+    .forma-pagamento {
+        min-width: 100%;
+        padding: 15px;
+    }
+
+    .forma-pagamento h2 {
+        font-size: 1.3rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .logo a {
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .content-item {
+        gap: 5px;
+    }
+
+    .content-item li {
+        padding: 5px;
+    }
+
+    .link {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .pedido {
+        padding: 10px;
+    }
+
+    .pedido h2 {
+        font-size: 1.2rem;
+    }
+
+    .pedido-item {
+        font-size: 0.85rem;
+    }
+
+    .total {
+        font-size: 0.95rem;
+    }
+
+    .forma-pagamento {
+        padding: 10px;
+    }
+
+    .forma-pagamento h2 {
+        font-size: 1.2rem;
+    }
+
+    .form input {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    .confirmar-pagamento {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+/* RESPONSIVIDADE - FINAL */

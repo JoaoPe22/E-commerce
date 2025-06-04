@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/pagamento.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbarT" id="navbarT">
+        <div class="logo">
+            <img src="../static/img/home/logo.png" alt="">
+            <a href="/templates/index.html">MegaLoja</a>
+        </div>
+        <ul class="content-item">
+            <li><a href="index.html" class="link">Home</a></li>
+            <li><a href="produtos.html" class="link">Produtos</a></li>
+            <li><a href="cadastro.html" class="link">Cadastro</a></li>
+            <li><a href="carrinho.html" class="link"><img src="../static/img/home/carrinho.png" alt="carrinho"></a></li>
+            <li><a href="login.html" class="link"><img src="../static/img/home/login.png" alt="login"></a></li>
+        </ul>
+    </nav>
+
+    <!-- PAGAMENTO -->
+    <div class="container">
+        <div class="pagamento-container">
+            <div class="pedido">
+                <h2>Resumo do Pedido</h2>
+                <div class="pedido-item">
+                    <span class="nome">Laptop SAMSUNG</span>
+                    <span class="quantidade">2 x 4.500.89</span>
+                    <span class="preco">R$9.001,78</span>
+                </div>
+                <div class="pedido-item">
+                    <span class="nome">Alexa</span>
+                    <span class="quantidade">2 x 459,50</span>
+                    <span class="preco">R$919</span>
+                </div>
+                <div class="total">
+                    <span>Total de itens: 4</span>
+                    <span>Total: R$9.920,78</span>
+                </div>
+            </div>
+
+            <div class="forma-pagamento">
+                <h2>Detalhes de Pagamento</h2>
+                <div class="form">
+                    <label>Número do Cartão</label>
+                    <input type="text" placeholder="1234 5678 9012 3456">
+                </div>
+                <div class="form-row">
+                    <div class="form">
+                        <label for="card-expiry">Data de Validade</label>
+                        <input type="text" placeholder="MM/AA">
+                    </div>
+                    <div class="form">
+                        <label>CVC</label>
+                        <input type="text" placeholder="123">
+                    </div>
+                </div>
+                <div class="form">
+                    <label>Nome no Cartão</label>
+                    <input type="text" placeholder="Nome do Titular">
+                </div>
+                <div class="form">
+                    <label>Endereço de Cobrança</label>
+                    <input type="text" placeholder="Rua, Número, Cidade">
+                </div>
+                <button class="confirmar-pagamento">Confirmar Pagamento</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
