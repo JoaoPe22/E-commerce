@@ -299,6 +299,7 @@ nav {
   gap: 20px;
   padding: 20px;
   flex-wrap: wrap;
+  margin-top: 95px;
 }
 
 .loja {
@@ -349,11 +350,6 @@ nav {
 .loja a:hover {
   background-color: #007185;
   color: white;
-}
-
-.loja:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* CONHEÇA A LOJA - FINAL */
@@ -507,7 +503,7 @@ nav {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.desde-item:hover { 
+.desde-item:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
